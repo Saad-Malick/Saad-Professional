@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="assets/videosbg/clear.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div> <div class="main-wrapper">
+<header class="hero-section">
+    
+    <div class="title-block">
+        <h1 class="glitch-text" data-text="SAAD">SAAD</h1>
+        <h2 class="role-text">Calculated Chaos // Creative Lead</h2>
+    </div>
+<div class="funk-portrait-container">
+    <div class="glitch-wrapper">
+        <video class="intro-video" muted loop playsinline id="introVid">
+            <source src="assets/videosbg/clear.mp4" type="video/mp4"> </video>
+        
+        <div class="static-image" style="background-image: url('assets/Images/Other-Images/notionpfp.jpg');"></div>
+    </div>
+</div>
+
+<script>
+    // Simple script to play video on hover
+    const portrait = document.querySelector('.funk-portrait-container');
+    const introVid = document.getElementById('introVid');
+
+    portrait.addEventListener('mouseenter', () => introVid.play());
+    portrait.addEventListener('mouseleave', () => introVid.pause());
+</script>
+    <div class="about-dossier protected-text">
+        <div class="dossier-header">
+            <span class="status-dot"></span>
+            <span class="status-text">OPEN FOR WORK</span>
+        </div>
+        <p>
+            I don't just write code; I orchestrate digital experiences. 
+            Blending technical precision with narrative depth. 
+            <br><br>
+            Currently rewriting the rules of engagement.
+        </p>
+        
+        <div class="dossier-links">
+            <a href="https://www.linkedin.com/in/saad-malick-43734b263/" target="_blank">LinkedIn_Protocol</a>
+            <a href="mailto: saadmalick51@gmail.com">Encrypted_Comms</a>
+        </div>
+    </div>
+
+</header>
+       <div class="bento-container">
+    
+    <a href="projects/alpha.html" class="bento-item item-1">
+        <div class="content">
+            <h3>Alpha</h3>
+            <p>The Professional Dossier (CV)</p>
+        </div>
+    </a>
+
+    <a href="projects/beta.html" class="bento-item item-2">
+        <div class="content">
+            <h3>Beta</h3>
+            <p>Figma Prototypes 🎨</p>
+        </div>
+    </a>
+
+    <a href="projects/comedy.html" class="bento-item item-5">
+        <div class="content">
+            <h3>Live Set</h3>
+            <p>Standup Comedy 🎙️</p>
+        </div>
+    </a>
+
+    <a href="projects/gamma.html" class="bento-item item-3">
+        <div class="content">
+            <h3>Gamma</h3>
+            <p>Wattpad Stories 📖</p>
+        </div>
+    </a>
+
+    <a href="projects/delta.html" class="bento-item item-4">
+        <div class="content">
+            <h3>Delta</h3>
+            <p>Thread Quotes ✒️</p>
+        </div>
+    </a>
+
+</div>
+        <section class="writing-section">
+            <h2 style="color: white; margin-bottom: 20px;">My Written Pieces</h2>
+            
+            <a href="sq/Stories/Wattpad/Benaam.html" class="story-card protected-text">
+                <div class="story-content">
+                    <h3>The Silent Echo</h3>
+                    <p>The rain didn't just fall; it whispered secrets to the pavement...</p>
+                </div>
+                <div class="read-more">Read Piece →</div>
+            </a>
+
+            <a href="sq/Quotes/NHIE.html" class="story-card protected-text">
+                <div class="story-content">
+                    <h3>Midnight in Lucknow</h3>
+                    <p>The shadows stretched longer than the minarets...</p>
+                </div>
+                <div class="read-more">Read Piece →</div>
+            </a>
+        </section>
+
+    </div>
+
+    <script>
+        // List your video files here
+        const videos = [
+            "assets/videos/clear.mp4",
+            "assets/videos/video2.mp4", // Add your second video here
+            "assets/videos/video3.mp4"  // Add your third video here
+        ];
+
+        let currentVideo = 0;
+        const videoElement = document.getElementById('bg-video');
+
+        // When one video ends, play the next one
+        videoElement.addEventListener('ended', () => {
+            currentVideo = (currentVideo + 1) % videos.length; // Loop back to start
+            videoElement.src = videos[currentVideo];
+            videoElement.play();
+        });
+        
+        // Note: Since 'loop' is on in HTML, it will loop the SAME video. 
+        // If you want to cycle different videos, remove the 'loop' attribute in HTML above.
+    </script>
+
+</body>
+</html>

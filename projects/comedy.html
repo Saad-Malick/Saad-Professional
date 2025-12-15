@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open Mic | Saad</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Specific Dark Club Vibe */
+        body { background-color: #050005; } /* Almost black purple */
+        .mic-header { text-align: center; margin-top: 50px; }
+        .mic-header h1 { color: #d00000; text-shadow: 0 0 10px #500000; }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        .video-card {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-card video { width: 100%; display: block; }
+        .caption { padding: 15px; color: #aaa; font-family: 'Space Grotesk'; }
+    </style>
+</head>
+<body>
+    <div class="mic-header">
+        <h1>LIVE & DANGEROUS</h1>
+        <p>Unfiltered sets. No apologies.</p>
+        <a href="../index.html" style="color: white; margin-top: 20px; display:inline-block;">← Exit Stage Left</a>
+    </div>
+
+    <div class="video-grid">
+        <div class="video-card">
+            <video controls poster="../assets/images/standup-poster.jpg">
+                <source src="../assets/videosbg/clear.mp4" type="video/mp4">
+            </video>
+            <div class="caption">"The Metro Incident" - Open Mic 2024</div>
+        </div>
+        
+        <div class="video-card">
+            <div style="padding:50px; text-align:center; color:#555;">[Upload Next Set]</div>
+        </div>
+    </div>
+</body>
+</html>
