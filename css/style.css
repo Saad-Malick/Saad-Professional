@@ -177,24 +177,39 @@ h1, h2, h3 {
     }
 }
 
-/* The Grid Container - UPDATED */
+/* --- PRO SITE LAYOUT (3 Items) --- */
 .bento-container {
     display: grid;
-    /* 1. Squeeze it: Restrict the width */
-    max-width: 1100px; 
-    width: 90%; /* Keeps it responsive on smaller screens */
+    max-width: 1100px;
+    width: 90%;
+    margin: 50px auto;
+    height: 500px; /* Slightly shorter, more compact */
     
-    /* 2. Center it: Top/Bottom margin 50px, Left/Right auto */
-    margin: 50px auto; 
-    
-    /* 3. Adjust Height: auto lets it grow if content grows, or stick to fixed */
-    height: 600px; /* Fixed height keeps the bento look clean */
-    
-    grid-template-columns: 50% 20% 30%;
+    /* Columns: 60% Resume | 40% Other */
+    grid-template-columns: 60% 40%;
+    /* Rows: Two equal halves for the right side */
     grid-template-rows: 1fr 1fr;
-    gap: 15px; /* Increased gap looks better when centered */
+    gap: 20px;
 }
 
+/* Positioning */
+.item-1 { 
+    grid-column: 1; 
+    grid-row: 1 / span 2; /* Resume takes full left side */
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.item-2 { 
+    grid-column: 2; 
+    grid-row: 1; /* Figma Top Right */
+    background: rgba(0, 100, 255, 0.1); 
+}
+
+.item-3 { 
+    grid-column: 2; 
+    grid-row: 2; /* Contact Bottom Right */
+    background: rgba(0, 255, 100, 0.1); /* Professional Green */
+}
 /* UPDATED: Glass Base Style for All Items */
 
 .bento-item {
@@ -261,12 +276,6 @@ h1, h2, h3 {
     background: rgba(0, 100, 255, 0.1); /* Blue tint */
 }
 
-/* Item 5: Bottom Middle (Comedy) - NEW */
-.item-5 { 
-    grid-column: 2; 
-    grid-row: 2; /* Takes bottom half */
-    background: rgba(255, 0, 50, 0.1); /* Red tint for the mic */
-}
 
 /* Item 3: Top Right (Wattpad) */
 .item-3 { 
@@ -275,15 +284,6 @@ h1, h2, h3 {
     background: rgba(255, 165, 0, 0.1); /* Orange tint */
 }
 
-/* Item 4: Bottom Right (Threads) */
-.item-4 { 
-    grid-column: 3; 
-    grid-row: 2; 
-    background: rgba(0, 0, 0, 0.3); /* Dark tint */
-}
-
-/* Add Hover Glow for Item 5 */
-.item-5:hover { box-shadow: 0 10px 30px -10px rgba(255, 0, 50, 0.4); }
 /* Video Background Magic */
 /* --- FULL PAGE VIDEO BACKGROUND --- */
 #bg-video {
